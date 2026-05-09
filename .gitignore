@@ -1,0 +1,12 @@
+# Node
+node_modules/
+dist/
+.env
+
+# Anchor/Rust
+target/
+**/*.rs.bk
+.anchor/
+
+# OS
+.DS_Store

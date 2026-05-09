@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 41% 9%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 41% 9%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 217 33% 14%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 173 80% 40%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 222 41% 9%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 217 33% 14%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 33% 18%;
+    --sidebar-ring: 160 84% 39%;
+
+    /* SymmFi brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(173 80% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(217 33% 10%) 50%, hsl(222 47% 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222 41% 11%) 0%, hsl(222 41% 8%) 100%);
+    --gradient-glow: radial-gradient(ellipse at 50% 0%, hsl(160 84% 39% / 0.12) 0%, transparent 60%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 60px -12px hsl(160 84% 39% / 0.25);
+    --shadow-button: 0 0 20px -4px hsl(160 84% 39% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Wallet button overrides */
+.wallet-adapter-button-trigger {
+  background: var(--gradient-primary) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-radius: var(--radius) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  padding: 0.625rem 1.25rem !important;
+  height: auto !important;
+  line-height: 1.25rem !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--shadow-button) !important;
+  border: 1px solid hsl(160 84% 39% / 0.3) !important;
+}
+.wallet-adapter-button-trigger:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 0 30px -4px hsl(160 84% 39% / 0.5) !important;
+}
+.wallet-adapter-button-trigger:not(:disabled):hover {
+  background: var(--gradient-primary) !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.wallet-adapter-modal-title {
+  color: hsl(var(--foreground)) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button {
+  color: hsl(var(--foreground)) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button:hover {
+  background: hsl(var(--secondary)) !important;
+}
+.wallet-adapter-modal-button-close {
+  background: hsl(var(--secondary)) !important;
+}
+.wallet-adapter-modal-button-close svg {
+  fill: hsl(var(--foreground)) !important;
+}
+
+/* Glass card utility */
+@layer utilities {
+  .glass-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(12px);
+  }
+  .glow-border {
+    border: 1px solid hsl(160 84% 39% / 0.25);
+    box-shadow: inset 0 1px 0 0 hsl(160 84% 39% / 0.08);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
