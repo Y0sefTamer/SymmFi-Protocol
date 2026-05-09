@@ -1,6 +1,6 @@
 # ⚖️ SymmFi - Symmetrical Finance
 
-![SymmFi Banner](https://via.placeholder.com/1200x400/111827/10B981?text=SymmFi+-+Symmetrical+Finance+Protocol)
+![SymmFi Banner](https://placehold.co/1200x400/111827/10B981.png?text=SymmFi+-+Symmetrical+Finance+Protocol)
 
 > **The Zero-Interest, Real-Yield DeFi Protocol on Solana.**
 
