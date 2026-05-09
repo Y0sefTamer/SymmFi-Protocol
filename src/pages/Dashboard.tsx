@@ -120,23 +120,7 @@ const Dashboard: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Sponsor warning */}
-          {!sponsorConfigured && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex items-start gap-3 rounded-xl border border-yellow-500/20 bg-yellow-500/5 p-4"
-            >
-              <AlertTriangle className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-              <div>
-                <p className="text-sm font-medium text-yellow-500">Sponsor Wallet Not Configured</p>
-                <p className="text-xs text-yellow-500/70 mt-1">
-                  Set the <code className="rounded bg-yellow-500/10 px-1 py-0.5 font-mono text-xs">VITE_SPONSOR_SECRET_KEY</code> environment
-                  variable with a funded Solana keypair to enable the devnet faucet.
-                </p>
-              </div>
-            </motion.div>
-          )}
+          
 
           {/* Protocol stats */}
           <ProtocolStats />
