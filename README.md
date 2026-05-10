@@ -10,7 +10,7 @@ SymmFi completely reimagines decentralized finance by eliminating predatory inte
 
 ## 🔗 Quick Links
 * 🌐 **Live Demo:** [symm-fi-protocol.vercel.app](https://symm-fi-protocol.vercel.app/)
-* 🎥 **Pitch/Demo Video:** [ Video URL Here](#)
+* 🎥 **Pitch/Demo Video:** [Video URL Here](https://youtu.be/XJKsG46vct8)
 
 ---
 
