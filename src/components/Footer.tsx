@@ -22,13 +22,13 @@ const Footer: React.FC = () => {
 
           <div className="flex items-center gap-3">
             <a
-              href="#"
+              href="https://x.com/dkyosef200"
               className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-secondary/50 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
             >
               <Twitter className="h-3.5 w-3.5" />
             </a>
             <a
-              href="#"
+              href="https://github.com/Y0sefTamer/SymmFi-Protocol"
               className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-secondary/50 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
             >
               <Github className="h-3.5 w-3.5" />
